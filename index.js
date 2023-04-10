@@ -31,7 +31,7 @@ app.use(cors());
 app.use(express.json()); //for parsing req with header-type "applicaiton/json"
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(helmet());
+//app.use(helmet());
 app.use(morgan("common"));
 
 const storage = multer.diskStorage({
