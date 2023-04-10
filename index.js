@@ -13,6 +13,7 @@ const cors = require("cors");
 const multer  = require('multer');
 const path = require("path");
 const bodyParser = require("body-parser");
+const PORT = process.env.port || 4000;
 
 dotenv.config();
 
@@ -57,6 +58,6 @@ app.use("/api/post", postRoute)
 app.use("/api/conversations", conversationsRoute)
 app.use("/api/messages", messagesRoute)
 
-app.listen(4000, ()=> {
-    console.log("Backend server is running!");
+app.listen( PORT, ()=> {
+    console.log("Backend server is running on port: "+PORT);
 })
